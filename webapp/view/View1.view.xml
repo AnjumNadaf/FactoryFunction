@@ -1,0 +1,54 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	
+		<App id="app">
+			<pages>
+				<Page id="page" title="Order Details Table"  titleLevel="H1" >
+					<content>
+					
+					<Table items="{ path:'m1>/Order_Details' , factory:'.myFactoryFunction'}"  id="tableid"  growing="true" growingScrollToLoad="true" growingThreshold="5">
+					<headerToolbar>
+					<Toolbar >
+					  <ToolbarSpacer/>
+					 
+					</Toolbar>
+					</headerToolbar>
+					<columns>
+					  <Column>
+					    <ObjectIdentifier title="OrderId"></ObjectIdentifier>
+					   </Column>
+					  <Column>
+					   <ObjectIdentifier title="ProductId"></ObjectIdentifier>
+					  </Column>
+					  <Column>
+					   <ObjectIdentifier title="ProductName"></ObjectIdentifier>
+					  </Column>
+					  <Column>
+					   <ObjectIdentifier title="UnitPrice"></ObjectIdentifier>
+					  </Column>
+					  <Column>
+					   <ObjectIdentifier title="Quantity"></ObjectIdentifier>
+					  </Column>
+					</columns>
+					<!-- <ColumnListItem>
+					  <cells>
+					  <Text  text="{m1>OrderId}"></Text>
+					  <Text text="{m1>ProductId}"></Text>
+					  <Text text="{m1>ProductName}"></Text>
+					  <Text text="{m1>Quantity}"></Text>
+					  <Text text="{m1>UnitPrice}"></Text>
+					  </cells>
+					</ColumnListItem> -->
+					
+					</Table>
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+	
+</mvc:View>
